@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <!-- See description of deployment process at http://central.sonatype.org/pages/ossrh-guide.html -->
@@ -70,7 +69,7 @@
     </modules>
 
     <properties>
-        <java.version>1.7</java.version>
+        <java.version>1.8</java.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -86,7 +85,7 @@
         <maven-source-plugin.version>2.4</maven-source-plugin.version>
         <nexus-staging-maven-plugin.version>1.6.6</nexus-staging-maven-plugin.version>
 
-        <gwt.version>2.7.0</gwt.version>
+        <gwt.version>2.8.0</gwt.version>
         <junit.version>4.12</junit.version>
     </properties>
 
@@ -180,6 +179,7 @@
                                 <mode>htmlunit</mode>
                                 <testTimeOut>240</testTimeOut>
                                 <failOnError>true</failOnError>
+                                <generateJsInteropExports>true</generateJsInteropExports>
                             </configuration>
                         </execution>
                     </executions>

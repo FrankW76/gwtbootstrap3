@@ -1,10 +1,10 @@
-package org.gwtbootstrap3.client.ui;
+package org.gwtbootstrap3.client.shared.js;
 
 /*
  * #%L
  * GwtBootstrap3
  * %%
- * Copyright (C) 2013 GwtBootstrap3
+ * Copyright (C) 2013 - 2018 GwtBootstrap3
  * %%
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,26 +20,20 @@ package org.gwtbootstrap3.client.ui;
  * #L%
  */
 
-import org.gwtbootstrap3.client.ui.constants.Styles;
+import com.google.gwt.user.client.Event;
+
+import jsinterop.annotations.JsFunction;
 
 /**
- * @author Grant Slender
- * @author Joshua Godi
+ * EventHandler helper functional interface to trigger
+ * Java event functions inside JavaScript
+ * @author Thiago Ricciardi
+ *
  */
-public class PanelCollapse extends Collapse {
+@JsFunction
+@FunctionalInterface
+public interface EventHandler {
 
-    public PanelCollapse() {
-        addStyleName(Styles.PANEL_COLLAPSE);
+    void callEventHandler(Event event);
 
-        // Default hidden
-        setToggle(false);
-    }
-
-    /**
-     * @deprecated use {@link #isShown()} instead.
-     */
-    @Deprecated
-    public boolean isIn() {
-        return isShown();
-    }
 }
